@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBFARMMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCargo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categorías">
+    <Key>
+      <PropertyRef Name="IdCategoría" />
+    </Key>
+    <Property Name="IdCategoría" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCategoría" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NombreCliente" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="CédulaCliente" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="TeléfonoCliente" Type="int" />
+    <Property Name="DirecciónCliente" Type="varchar" MaxLength="150" />
+    <Property Name="TipoCliente" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="IdCompra" />
+    </Key>
+    <Property Name="IdCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpleado" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="IdProveedor" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="FechaCompra" Type="date" Nullable="false" />
+    <Property Name="TotalCompra" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ControlCrédito">
+    <Key>
+      <PropertyRef Name="IdControlCrédito" />
+    </Key>
+    <Property Name="IdControlCrédito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCrédito" Type="int" Nullable="false" />
+    <Property Name="Cuota" Type="int" Nullable="false" />
+    <Property Name="Saldo" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FechaAbono" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Crédito">
+    <Key>
+      <PropertyRef Name="IdCrédito" />
+    </Key>
+    <Property Name="IdCrédito" Type="int" Nullable="false" />
+    <Property Name="IdVenta" Type="int" Nullable="false" />
+    <Property Name="Plazo" Type="int" Nullable="false" />
+    <Property Name="MontoTotal" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleCompra">
+    <Key>
+      <PropertyRef Name="IdDetalleCompra" />
+    </Key>
+    <Property Name="IdDetalleCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompra" Type="int" Nullable="false" />
+    <Property Name="IdDetalleLote" Type="int" Nullable="false" />
+    <Property Name="CantidadCompra" Type="int" Nullable="false" />
+    <Property Name="PrecioCompra" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SubtotalCompra" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleLote">
+    <Key>
+      <PropertyRef Name="IdDetalleLote" />
+    </Key>
+    <Property Name="IdDetalleLote" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdLote" Type="int" Nullable="false" />
+    <Property Name="IdProducto" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FechaIngreso" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleVenta">
+    <Key>
+      <PropertyRef Name="IdDetalleVenta" />
+    </Key>
+    <Property Name="IdDetalleVenta" Type="int" Nullable="false" />
+    <Property Name="IdVenta" Type="int" Nullable="false" />
+    <Property Name="IdDetalleLote" Type="int" Nullable="false" />
+    <Property Name="CantidadVendida" Type="int" Nullable="false" />
+    <Property Name="PrecioVenta" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="IVA" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SubtotalFactura" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Devoluciones">
+    <Key>
+      <PropertyRef Name="IdDevolución" />
+    </Key>
+    <Property Name="IdDevolución" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDetalleVenta" Type="int" Nullable="false" />
+    <Property Name="FechaDevolución" Type="date" Nullable="false" />
+    <Property Name="CantidadDevuelta" Type="int" Nullable="false" />
+    <Property Name="Motivo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TotalDevolución" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empleados">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NombreEmpleado" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="CédulaEmpleado" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="TeléfonoEmpleado" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DirecciónEmpleado" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+    <Property Name="Género" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Usuario" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Contraseña" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lotes">
+    <Key>
+      <PropertyRef Name="IdLote" />
+    </Key>
+    <Property Name="IdLote" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaVencimientoLote" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Marcas">
+    <Key>
+      <PropertyRef Name="IdMarca" />
+    </Key>
+    <Property Name="IdMarca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreMarca" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NombreProducto" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="StockMinimo" Type="int" Nullable="false" />
+    <Property Name="IdCategoría" Type="int" Nullable="false" />
+    <Property Name="IdMarca" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NombreProveedor" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="CédulaProveedor" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="DirecciónProveedor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoFactura" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaVenta" Type="date" Nullable="false" />
+    <Property Name="IdCliente" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="IdEmpleado" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TotalVenta" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TipoPago" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="RefCargos6">
+    <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargos">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Empleados">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCategorías15">
+    <End Role="Categorías" Type="Self.Categorías" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorías">
+        <PropertyRef Name="IdCategoría" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IdCategoría" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefClientes4">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCompras8">
+    <End Role="Compras" Type="Self.Compras" Multiplicity="1" />
+    <End Role="DetalleCompra" Type="Self.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compras">
+        <PropertyRef Name="IdCompra" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCrédito17">
+    <End Role="Crédito" Type="Self.Crédito" Multiplicity="1" />
+    <End Role="ControlCrédito" Type="Self.ControlCrédito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Crédito">
+        <PropertyRef Name="IdCrédito" />
+      </Principal>
+      <Dependent Role="ControlCrédito">
+        <PropertyRef Name="IdCrédito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDetalleLote11">
+    <End Role="DetalleLote" Type="Self.DetalleLote" Multiplicity="1" />
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleLote">
+        <PropertyRef Name="IdDetalleLote" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="IdDetalleLote" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDetalleLote12">
+    <End Role="DetalleLote" Type="Self.DetalleLote" Multiplicity="1" />
+    <End Role="DetalleCompra" Type="Self.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleLote">
+        <PropertyRef Name="IdDetalleLote" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="IdDetalleLote" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDetalleVenta16">
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="1" />
+    <End Role="Devoluciones" Type="Self.Devoluciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta">
+        <PropertyRef Name="IdDetalleVenta" />
+      </Principal>
+      <Dependent Role="Devoluciones">
+        <PropertyRef Name="IdDetalleVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefEmpleados5">
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleados">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefLotes9">
+    <End Role="Lotes" Type="Self.Lotes" Multiplicity="1" />
+    <End Role="DetalleLote" Type="Self.DetalleLote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lotes">
+        <PropertyRef Name="IdLote" />
+      </Principal>
+      <Dependent Role="DetalleLote">
+        <PropertyRef Name="IdLote" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMarcas14">
+    <End Role="Marcas" Type="Self.Marcas" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marcas">
+        <PropertyRef Name="IdMarca" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IdMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefProductos10">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+    <End Role="DetalleLote" Type="Self.DetalleLote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="DetalleLote">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefProveedores7">
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefVentas1">
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="IdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefVentas3">
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
+    <End Role="Crédito" Type="Self.Crédito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="Crédito">
+        <PropertyRef Name="IdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBFARMMSModelStoreContainer">
+    <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categorías" EntityType="Self.Categorías" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compras" EntityType="Self.Compras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlCrédito" EntityType="Self.ControlCrédito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Crédito" EntityType="Self.Crédito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleCompra" EntityType="Self.DetalleCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleLote" EntityType="Self.DetalleLote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleVenta" EntityType="Self.DetalleVenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Devoluciones" EntityType="Self.Devoluciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lotes" EntityType="Self.Lotes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marcas" EntityType="Self.Marcas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="RefCargos6" Association="Self.RefCargos6">
+      <End Role="Cargos" EntitySet="Cargos" />
+      <End Role="Empleados" EntitySet="Empleados" />
+    </AssociationSet>
+    <AssociationSet Name="RefCategorías15" Association="Self.RefCategorías15">
+      <End Role="Categorías" EntitySet="Categorías" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="RefClientes4" Association="Self.RefClientes4">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="RefCompras8" Association="Self.RefCompras8">
+      <End Role="Compras" EntitySet="Compras" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="RefCrédito17" Association="Self.RefCrédito17">
+      <End Role="Crédito" EntitySet="Crédito" />
+      <End Role="ControlCrédito" EntitySet="ControlCrédito" />
+    </AssociationSet>
+    <AssociationSet Name="RefDetalleLote11" Association="Self.RefDetalleLote11">
+      <End Role="DetalleLote" EntitySet="DetalleLote" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="RefDetalleLote12" Association="Self.RefDetalleLote12">
+      <End Role="DetalleLote" EntitySet="DetalleLote" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="RefDetalleVenta16" Association="Self.RefDetalleVenta16">
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+      <End Role="Devoluciones" EntitySet="Devoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="RefEmpleados5" Association="Self.RefEmpleados5">
+      <End Role="Empleados" EntitySet="Empleados" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="RefLotes9" Association="Self.RefLotes9">
+      <End Role="Lotes" EntitySet="Lotes" />
+      <End Role="DetalleLote" EntitySet="DetalleLote" />
+    </AssociationSet>
+    <AssociationSet Name="RefMarcas14" Association="Self.RefMarcas14">
+      <End Role="Marcas" EntitySet="Marcas" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="RefProductos10" Association="Self.RefProductos10">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="DetalleLote" EntitySet="DetalleLote" />
+    </AssociationSet>
+    <AssociationSet Name="RefProveedores7" Association="Self.RefProveedores7">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="RefVentas1" Association="Self.RefVentas1">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="RefVentas3" Association="Self.RefVentas3">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="Crédito" EntitySet="Crédito" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

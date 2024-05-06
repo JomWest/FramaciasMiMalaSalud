@@ -1,0 +1,15 @@
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\CapaEntidades.dll
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\EntityFramework.dll
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\CapaEntidades.pdb
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\CapaEntidades.dll.config
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\EntityFramework.xml
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaDatos\obj\Debug\CapaDatos.pdb
