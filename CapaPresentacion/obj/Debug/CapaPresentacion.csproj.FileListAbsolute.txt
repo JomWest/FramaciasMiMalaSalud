@@ -24,3 +24,12 @@ C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaPresentacion\obj\Debug\Ca
 C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaPresentacion\bin\Debug\CapaDatos.dll
 C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaPresentacion\bin\Debug\CapaDatos.pdb
 C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.menu.resources
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

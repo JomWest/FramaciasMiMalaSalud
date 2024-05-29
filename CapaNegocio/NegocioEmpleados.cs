@@ -14,7 +14,7 @@ namespace CapaNegocio
 
         DBFARMMSEntities db = new DBFARMMSEntities();
 
-        #region Empelados
+        #region Empleados
         public void NuevoEmpleado(int IdEmpleado, string NombreEmpleado, string CédulaEmpleado, int TeléfonoEmpleado, string Email, string DirecciónEmpleado, int IdCargo, string Género, string Usuario, string Contraseña)
         {
            

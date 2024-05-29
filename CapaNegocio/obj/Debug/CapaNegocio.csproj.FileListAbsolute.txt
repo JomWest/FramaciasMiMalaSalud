@@ -16,3 +16,7 @@ C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaNegocio\obj\Debug\CapaNeg
 C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Azazel\source\repos\FarmaciasMiBuenaSalud\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\usuario\Desktop\Proyecto Farmacia\FramaciasMiMalaSalud\CapaNegocio\obj\Debug\CapaNegocio.pdb
